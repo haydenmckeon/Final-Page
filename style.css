@@ -71,12 +71,42 @@ body h1 {
 .cardinals-header {
   background-color: #C41E3A;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.cardinals-header img {
+  max-width: 200px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 80%;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #C41E3A;
+  color: white;
+}
+
 }
 .dodgers-header {
   background-color: #005A9C;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.redsox-header {
+.Paul-header {
   background-color: #BD3039;
   color: white;
 }
