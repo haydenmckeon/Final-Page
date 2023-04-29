@@ -4,6 +4,29 @@
     <title>Ryan Helsley and His Dog</title>
     <link rel="stylesheet" href="style.css">
     <style>
+            nav {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 1rem;
+      }
+      nav ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav li {
+        margin-right: 1.5rem;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: color 0.2s ease-in-out;
+      }
+      nav a:hover {
+        color: #c41e3a;
+      }
       body {
         background-color: #f9f9f9;
         font-family: Helvetica, sans-serif;
@@ -62,17 +85,23 @@
       footer {
         background-color: #333;
         color: white;
-          padding: 1rem;
-          text-align: center;
+        padding: 0rem;
+        text-align: center;
+        position: fixed;
+
       }
       footer p {
         margin: 0;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
       }
      body {
-        background-image: url("baseball-background.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
+  background-image: linear-gradient(to bottom right, #002147, #d62828);
+  background-size: cover;
+}
+
       #about {
   color: white;
   text-align: center;
@@ -81,7 +110,7 @@
   </head>
   <body>
     <header class="Helsley-header">
-      <h1>Ryan Helsley and Ruby</h1>
+      <h1>Ryan Helsley and Major</h1>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -94,7 +123,7 @@
       <img src="helsley.webp" alt="Ryan Helsley himself">
   <section id="about" style="font-family: Arial, sans-serif;">
     <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">About Ryan Helsley</h2>
-    <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Ryan Helsley is a professional baseball player who currently pitches for the St. Louis Cardinals. He made his major league debut in 2019 and was a member of the Cardinals' bullpen during their 2020 postseason run. In his free time, he enjoys spending time with his dog, a Black Lab named Ruby.</p>
+    <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Ryan Helsley is a professional baseball player who currently pitches for the St. Louis Cardinals. He made his major league debut in 2019 and was a member of the Cardinals' bullpen during their 2020 postseason run. In his free time, he enjoys spending time with his dog, a Black Lab named Major.</p>
   </section>
 </main>
       </section>

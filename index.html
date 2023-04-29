@@ -2,15 +2,101 @@
 <html>
   <head>
     <title>MLB Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+/*   here is my internal/in-line style section. I also have a external css.file but it got confusing with having different things affecting different places on the pages, so i wanted to adhere to the requirement but also make it easier on my at the same time   */
+      body {
+        background-image: linear-gradient(to bottom right, #111, #555);
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 1rem;
+      }
+      nav ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav li {
+        margin-right: 1.5rem;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: color 0.2s ease-in-out;
+      }
+      nav a:hover {
+        color: #c41e3a;
+      }
+      h1 {
+        font-size: 4rem;
+        margin-top: 5rem;
+        text-align: center;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      p {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin: 3rem auto;
+        max-width: 800px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 0rem;
+        text-align: right;
+        position: fixed;
+      }
+      footer p {
+        margin: 0;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      a {
+        color: steelblue;
+      }
+      button {
+        background-color: #c41e3a;
+        border: none;
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        margin-top: 3rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+      button:hover {
+        background-color: #a31a2f;
+      }
+      #welcome-message {
+        color: #c41e3a;
+      }
+    </style>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="cardinals.html">St. Louis Cardinals</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cardinals.html">Cardinals</a></li>
       </ul>
     </nav>
-    <h1>Welcome this is Major League Baseball!</h1>
-    <p>This is the landing page for Major League Baseball.</p>
+    <h1>Welcome to Major League Baseball!</h1>
+    <p>This is the landing page for Major League Baseball. Stay up-to-date with the latest news, scores, and special ticketed events. Check out the <a href="https://www.mlb.com/" target="_blank">MLB website</a> for more league-wide information. Let's play ball!</p>
+   <!-- This is my javascript element here -->
+    <button onclick="document.getElementById('welcome-message').style.display = 'block'; document.body.style.color = '#c41e3a'">Cardinal Fan?</button>
+    <p id="welcome-message" style="display: none;">Welcome to Cardinal Country!</p>
+    <footer>
+      <p>&copy; 2023 St. Louis Cardinals. All rights reserved.</p>
+    </footer>
   </body>
 </html>

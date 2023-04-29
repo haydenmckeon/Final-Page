@@ -9,6 +9,50 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+      nav {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 1rem;
+      }
+      nav ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav li {
+        margin-right: 1.5rem;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: color 0.2s ease-in-out;
+      }
+      nav a:hover {
+        color: #c41e3a;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 0rem;
+        text-align: center;
+        position: fixed;
+
+      }
+      footer p {
+        margin: 0;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      img {
+        width: 400px;
+        height: 250px;
+        border-radius: 10%;
+        margin-right: 0rem;
+      }
   </style>
   </head>
   <body>
@@ -17,7 +61,7 @@
       <h1>St. Louis Cardinals</h1>
       <nav>
         <ul>
-          <li><a href="waino.html">Adam Wainwright</a></li>
+          <li><a href="nolan.html">Nolan Arenado</a></li>
           <li><a href="paul.html">Paul Goldschmidt</a></li>
           <li><a href="hels.html">Ryan Helsley</a></li>
           <li><a href="index.html">Home</a></li>
@@ -26,24 +70,31 @@
     </header>
     <main>
       <section id="history">
-        <h2>Purina Partners with the St. Louis Cardinals</h2>
-        <p>Get your tickets today for the 18th Annual Purina Pooches in the Ballpark on Saturday, May 6th when the Cards host the Detroit Tigers at 1:15 PM. Fans who purchase a special Pooches ticket can enjoy the game with their pooch in style, featuring all-inclusive seats with food and drinks included! Tickets buyers will receive an email from the Cardinals and Purina this spring outlining requirements for dog entry into the stadium.
+  <h2>Purina Partners with the St. Louis Cardinals</h2>
+  <div style="float: right; margin: 0 0 1rem 1rem;">
+    <img src="pooches.jpg" alt="Purina Pooches in the Ballpark">
+  </div>
+  <p>Get your tickets today for the 18th Annual Purina Pooches in the Ballpark on Saturday, May 6th when the Cards host the Detroit Tigers at 1:15 PM. Fans who purchase a special Pooches ticket can enjoy the game with their pooch in style, featuring all-inclusive seats with food and drinks included! Tickets buyers will receive an email from the Cardinals and Purina this spring outlining requirements for dog entry into the stadium.
 
 All participants will receive a Purina goodie-bag.
 
 All dogs need to be at least 6 months old.</p>
-        <p>More things can go here.</p>
-      </section>
-      <section id="roster">
-        <h2>Section Two</h2>
-        <p>Something can go here.</p>
-        <ul>
-          <li>Idea 1</li>
-          <li>Idea 2</li>
-          <li>Idea 3</li>
-          <li>Idea 4</li>
-        </ul>
-      </section>
+
+  <form id="subscription-form">
+    <label for="email-input">Enter your email for regular updates on events in your area:</label>
+    <input type="email" id="email-input" name="email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <h2>There's an event for every kind of fan.</h2>
+  <p>Certain Tickets Come With Different Perks!.</p>
+  <ul>
+    <li>Free Bobblehead</li>
+    <li>Giveaway Hats</li>
+    <li>T-Shirts</li>
+    <li>Free Food</li>
+  </ul>
+</section>
+
       <section id="schedule">
         <h2>Schedule for Specials!</h2>
         <iframe src="https://www.cardsconclave.com/2023/01/24/cardinals-announce-full-2023-theme-ticket-schedule/" height="600" width="100%"></iframe>
