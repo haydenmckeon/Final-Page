@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MLB Landing Page</title>
-    <style>
-/*   here is my internal/in-line style section. I also have a external css.file but it got confusing with having different things affecting different places on the pages, so i wanted to adhere to the requirement but also make it easier on my at the same time   */
+  <title>MLB Landing Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
       body {
-        background-image: linear-gradient(to bottom right, #111, #555);
         color: white;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
+      }   
       nav {
         background-color: rgba(0, 0, 0, 0.7);
         padding: 1rem;
@@ -81,20 +77,56 @@
       #welcome-message {
         color: #c41e3a;
       }
+      .background-image{
+        height: 100vh;
+        background-image: url('baseball-background.jpg');
+        background-size: cover;
+        position: relative;
+      }
+      .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      .description{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 5;
+      }
     </style>
   </head>
-  <body>
+  <body class="background-image">
+    <div class="overlay"></div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="cardinals.html">Cardinals</a></li>
       </ul>
     </nav>
+    <div class="container">
+      <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+        <p>khjdebrveiuhvbeibviuebeivur</p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 text-center">
     <h1>Welcome to Major League Baseball!</h1>
     <p>This is the landing page for Major League Baseball. Stay up-to-date with the latest news, scores, and special ticketed events. Check out the <a href="https://www.mlb.com/" target="_blank">MLB website</a> for more league-wide information. Let's play ball!</p>
-   <!-- This is my javascript element here -->
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+    <p>dboindiurbneiurngiuernhgb</p>
+  </div>
+    <!-- This is my javascript element here -->
     <button onclick="document.getElementById('welcome-message').style.display = 'block'; document.body.style.color = '#c41e3a'">Cardinal Fan?</button>
     <p id="welcome-message" style="display: none;">Welcome to Cardinal Country!</p>
+  </div>
+</div>
     <footer>
       <p>&copy; 2023 St. Louis Cardinals. All rights reserved.</p>
     </footer>
