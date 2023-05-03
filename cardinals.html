@@ -2,107 +2,171 @@
 <html>
   <head>
     <title>St. Louis Cardinals</title>
-    <link rel="stylesheet" href="style.css">
+    <!--This is a link to the Bootstrap CSS file-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--This is a script tag linking to the Bootstrap JavaScript file-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--This is the start of the internal/in-line style section.-->
     <style>
-      body {
-        background-image: url("cardinal-background.webp");
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      nav {
+    body {
+        color: white;
+    }   
+
+    /* Styles the navigation bar by setting its background color to a semi-transparent black and adding padding */
+    nav {
         background-color: rgba(0, 0, 0, 0.7);
         padding: 1rem;
-      }
-      nav ul {
+    }
+
+    /* Sets the styling for the unordered list inside the navigation bar by removing the default list styling, setting the margin and padding to 0, and displaying the list items as a flexbox */
+    nav ul {
         display: flex;
         list-style-type: none;
         margin: 0;
         padding: 0;
-      }
-      nav li {
+    }
+
+    /* Styles the list items inside the navigation bar by adding a margin to the right side */
+    nav li {
         margin-right: 1.5rem;
-      }
-      nav a {
+    }
+
+    /* Styles the links inside the navigation bar by setting the text color to white, removing the underline, setting the font weight to bold, and adding a hover transition */
+    nav a {
         color: white;
         text-decoration: none;
         font-weight: bold;
         font-size: 1.2rem;
         transition: color 0.2s ease-in-out;
-      }
-      nav a:hover {
+    }
+
+    /* Styles the links inside the navigation bar when hovering over them by changing the text color to a shade of red */
+    nav a:hover {
         color: #c41e3a;
-      }
-      footer {
+    }
+
+    /* Sets the font size of the main heading to 4rem, adds margin to the top, centers the text, and adds a text shadow */
+    h1 {
+        font-size: 4rem;
+        margin-top: 5rem;
+        text-align: center;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Sets the font size and line height of the paragraph, adds margin, limits the width, centers the text, and adds a text shadow */
+    p {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin: 3rem auto;
+        max-width: 800px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Styles the footer by setting the background color to a dark gray, the text color to white, and adding padding and aligning the text to the right */
+    footer {
         background-color: #333;
         color: white;
         padding: 0rem;
-        text-align: center;
+        text-align: right;
         position: fixed;
+    }
 
-      }
-      footer p {
+    /* Styles the text inside the footer by removing margin and positioning it to the bottom left and making it span the full width */
+    footer p {
         margin: 0;
         position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
+        text-align: justify;
+    }
+
+    /* Styles the links by setting the text color*/
+    a {
+        color: white;
+    } 
+    p {
+      text-shadow: 2px 2px 4px black;
+
+    }
+    /* setting the background color to a shade of red, removing the border, setting the text color to white, adding padding, setting the font size, adding margin to the top, setting the cursor to pointer, and adding a hover transition */
+    button {
+        background-color: #c41e3a;
+        border: none;
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        margin-top: 3rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
       }
-      img {
-        width: 300px;
-        height: 250px;
-        border-radius: 10%;
+      button:hover {
+        background-color: #a31a2f;
+      }
+      #welcome-message {
+        color: #c41e3a;
+/* here is where i chose the color for the message that appears when you press the button*/
+      }
+      .background-image{
+        height: 100vh;
+        background-image: url('card-back.jpeg');
+        background-size: cover;
+        position: relative;
+      }
+      .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      .description{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 5;
+      }
+     img {
+        width: 500px;
+        height: 550px;
+        border-radius: 0%;
         margin-right: 0rem;
+        padding-top: 0px;
       }
-  </style>
+    </style>
   </head>
-  <body>
-    <header class="cardinals-header">
-      <img src="cardinals-logo.png" alt="St. Louis Cardinals Logo">
-      <h1>St. Louis Cardinals</h1>
-      <nav>
-        <ul>
+  <body class="background-image">
+    <div class="overlay"></div>
+    <nav>
+      <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="nolan.html">Nolan Arenado</a></li>
           <li><a href="paul.html">Paul Goldschmidt</a></li>
           <li><a href="hels.html">Ryan Helsley</a></li>
-          <li><a href="index.html">Home</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="history">
-  <h2>Purina Partners with the St. Louis Cardinals</h2>
-  <div style="float: right; margin: 0 0 1rem 1rem;">
-    <img src="pooches.jpg" alt="Purina Pooches in the Ballpark">
+      </ul>
+    </nav>
+    <header class="container-fluid header">
+      <div class="row">
+        <div class="col-4">
+          <video src="cardvid.mp4" height="525" width="100%" controls></video>
+      </div>
+      <div class="col-4">
+    <h1>St. Louis Cardinals</h1>
+    <p><a href="https://www.mlb.com/cardinals/tickets/specials/pooches-in-the-ballpark" target="_blank">18th Annual Pooches at the Ballpark</a>,fans who purchase a special Pooches ticket can enjoy the game with their pooch in style, featuring all-inclusive seats with food and drinks included! Tickets buyers will receive an email from the Cardinals and Purina this spring outlining requirements for dog entry into the stadium.</p>
   </div>
-  <p>Get your tickets today for the 18th Annual Purina Pooches in the Ballpark on Saturday, May 6th when the Cards host the Detroit Tigers at 1:15 PM. Fans who purchase a special Pooches ticket can enjoy the game with their pooch in style, featuring all-inclusive seats with food and drinks included! Tickets buyers will receive an email from the Cardinals and Purina this spring outlining requirements for dog entry into the stadium.
-
-All participants will receive a Purina goodie-bag.
-
-All dogs need to be at least 6 months old.</p>
-
-  <form id="subscription-form">
-    <label for="email-input">Enter your email for regular updates on events in your area:</label>
-    <input type="email" id="email-input" name="email" required>
-    <button type="submit">Subscribe</button>
-  </form>
-  <h2>There's an event for every kind of fan.</h2>
-  <p>Certain Tickets Come With Different Perks!.</p>
-  <ul>
-    <li>Free Bobblehead</li>
-    <li>Giveaway Hats</li>
-    <li>T-Shirts</li>
-    <li>Free Food</li>
-  </ul>
-</section>
-
-      <section id="schedule">
-        <h2>Schedule for Specials!</h2>
-        <iframe src="https://www.cardsconclave.com/2023/01/24/cardinals-announce-full-2023-theme-ticket-schedule/" height="600" width="100%"></iframe>
-      </section>
-    </main>
+  <div class="col-4">
+    <img src="arenado-and-dog.jpg" alt="Paul Goldschmidt's dogs">
+    <p>Annual Pooches at the Ballpark!&copy </p>
+  </div>
+</div>
+</header>
     <footer>
       <p>&copy; 2023 St. Louis Cardinals. All rights reserved.</p>
     </footer>
   </body>
 </html>
-

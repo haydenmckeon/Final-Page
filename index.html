@@ -1,69 +1,93 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>MLB Landing Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- here is my internal/in-line style section. I also have a external css.file but it got confusing with having different things affecting different places on the pages, so i wanted to adhere to the requirement but also make it easier on my at the same time. -->
-  <style>
-      body {
+    <title>MLB Landing Page</title>
+    <!--This is a link to the Bootstrap CSS file-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--This is a script tag linking to the Bootstrap JavaScript file-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--This is the start of the internal/in-line style section.-->
+    <style>
+    body {
         color: white;
-      }   
-      nav {
+    }   
+
+    /* Styles the navigation bar by setting its background color to a semi-transparent black and adding padding */
+    nav {
         background-color: rgba(0, 0, 0, 0.7);
         padding: 1rem;
-      }
-      nav ul {
+    }
+
+    /* Sets the styling for the unordered list inside the navigation bar by removing the default list styling, setting the margin and padding to 0, and displaying the list items as a flexbox */
+    nav ul {
         display: flex;
         list-style-type: none;
         margin: 0;
         padding: 0;
-      }
-      nav li {
+    }
+
+    /* Styles the list items inside the navigation bar by adding a margin to the right side */
+    nav li {
         margin-right: 1.5rem;
-      }
-      nav a {
+    }
+
+    /* Styles the links inside the navigation bar by setting the text color to white, removing the underline, setting the font weight to bold, and adding a hover transition */
+    nav a {
         color: white;
         text-decoration: none;
         font-weight: bold;
         font-size: 1.2rem;
         transition: color 0.2s ease-in-out;
-      }
-      nav a:hover {
+    }
+
+    /* Styles the links inside the navigation bar when hovering over them by changing the text color to a shade of red */
+    nav a:hover {
         color: #c41e3a;
-      }
-      h1 {
+    }
+
+    /* Sets the font size of the main heading to 4rem, adds margin to the top, centers the text, and adds a text shadow */
+    h1 {
         font-size: 4rem;
         margin-top: 5rem;
         text-align: center;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-      }
-      p {
+    }
+
+    /* Sets the font size and line height of the paragraph, adds margin, limits the width, centers the text, and adds a text shadow */
+    p {
         font-size: 2rem;
         line-height: 1.5;
         margin: 3rem auto;
         max-width: 800px;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      }
-      footer {
+        text-shadow: 2px 2px 4px black;
+    }
+
+    /* Styles the footer by setting the background color to a dark gray, the text color to white, and adding padding and aligning the text to the right */
+    footer {
         background-color: #333;
         color: white;
         padding: 0rem;
         text-align: right;
         position: fixed;
-      }
-      footer p {
+    }
+
+    /* Styles the text inside the footer by removing margin and positioning it to the bottom left and making it span the full width */
+    footer p {
         margin: 0;
         position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
-      }
-      a {
-        color: steelblue;
-      }
-      button {
+    }
+
+    /* Styles the links by setting the text color to steelblue */
+    a {
+        color: white;
+    } 
+
+    /* setting the background color to a shade of red, removing the border, setting the text color to white, adding padding, setting the font size, adding margin to the top, setting the cursor to pointer, and adding a hover transition */
+    button {
         background-color: #c41e3a;
         border: none;
         color: white;
@@ -78,6 +102,7 @@
       }
       #welcome-message {
         color: #c41e3a;
+/* here is where i chose the color for the message that appears when you press the button*/
       }
       .background-image{
         height: 100vh;
@@ -102,6 +127,13 @@
         color: white;
         z-index: 5;
       }
+     img {
+        width: 525px;
+        height: 590px;
+        border-radius: 0%;
+        margin-right: 0rem;
+        padding-top: 110px;
+      }
     </style>
   </head>
   <body class="background-image">
@@ -113,11 +145,10 @@
       </ul>
     </nav>
     <header class="container-fluid header">
-
       <div class="row">
-      <div class="col-4">
-     <p id="datetime"></p>
-
+        <div class="col-4">
+          <video src="baseballis.mp4" height="525" width="100%" controls></video>
+          <p id="datetime"></p>
 <script>
   const datetimeElement = document.getElementById("datetime");
   const now = new Date();
@@ -129,12 +160,11 @@
     <p>This is the landing page for Major League Baseball. Stay up-to-date with the latest news, scores, and special ticketed events. Check out the Official <a href="https://www.mlb.com/" target="_blank">MLB website</a> for more league-wide information. Let's play ball!</p>
   </div>
   <div class="col-4">
-    <p>dboindiurbneiurngiuernhgb</p>
+    <img src="graphic2.png" alt="Ryan Helsley himself">
   </div>
 </div>
 </div>
 </header>
-    <!-- This is my javascript element here -->
     <button onclick="document.getElementById('welcome-message').style.display = 'block'; document.body.style.color = '#c41e3a'">Cardinal Fan?</button>
     <p id="welcome-message" style="display: none;">Welcome to Cardinal Country!</p>
     <footer>
